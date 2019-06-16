@@ -3,34 +3,34 @@
   connection: local
   tasks:
 
-  - name: System Upgrade
-    command: 
-      argv:
-        - rpm-ostree
-        - upgrade
-        - --upgrade-unchanged-exit-77
-    register: result
-    failed_when: result.rc != 0 and result.rc != 77
-    changed_when: result.rc == 0
+  #- name: System Upgrade
+  #  command: 
+  #    argv:
+  #      - rpm-ostree
+  #      - upgrade
+  #      - --upgrade-unchanged-exit-77
+  #  register: result
+  #  failed_when: result.rc != 0 and result.rc != 77
+  #  changed_when: result.rc == 0
 
   - name: Install Enpass Repository
     get_url:
       url: https://yum.enpass.io/enpass-yum.repo
       dest: /etc/yum.repos.d/enpass-yum.repo
 
-  - name: Install System Packages                      
-    command: 
-      argv:
-        - rpm-ostree
-        - install
-        - --idempotent
-        - --unchanged-exit-77
-        - nano
-        - htop
-        - enpass
-    register: result
-    failed_when: result.rc != 0 and result.rc != 77
-    changed_when: result.rc == 0
+  #- name: Install System Packages                      
+  #  command: 
+  #    argv:
+  #      - rpm-ostree
+  #      - install
+  #      - --idempotent
+  #      - --unchanged-exit-77
+  #      - nano
+  #      - htop
+  #      - enpass
+  #  register: result
+  #  failed_when: result.rc != 0 and result.rc != 77
+  #  changed_when: result.rc == 0
         
   - name: Enable Flathub
     flatpak_remote:
