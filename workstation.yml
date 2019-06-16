@@ -1,0 +1,50 @@
+- name: Run playbook tasks on localhost
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+
+  - name: System Upgrade
+    command: 
+      argv:
+        - rpm-ostree
+        - upgrade
+        - --upgrade-unchanged-exit-77
+    register: result
+    failed_when: result.rc != 0 and result.rc != 77
+    changed_when: result.rc == 0
+
+  - name: Install Enpass Repository
+    get_url:
+      url: https://yum.enpass.io/enpass-yum.repo
+      dest: /etc/yum.repos.d/enpass-yum.repo
+
+  - name: Install System Packages                      
+    command: 
+      argv:
+        - rpm-ostree
+        - install
+        - --idempotent
+        - --unchanged-exit-77
+        - nano
+        - htop
+        - enpass
+    register: result
+    failed_when: result.rc != 0 and result.rc != 77
+    changed_when: result.rc == 0
+        
+  - name: Enable Flathub
+    flatpak_remote:
+      name: flathub
+      state: present
+      flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+      
+  - name: Install Gedit
+    flatpak:
+      name: org.gnome.gedit
+      state: present
+  
+  - name: Install Spotify
+    flatpak:
+      name: com.spotify.Client
+      state: present
+      
