@@ -1,0 +1,278 @@
+---
+- name: Enable Flathub
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    
+
+# Games
+
+- name: Install Steam
+  async: 60
+  poll: 0
+  flatpak:
+    name: com.valvesoftware.Steam
+    state: present
+    
+- name: Install Discord
+  async: 60
+  poll: 0
+  flatpak:
+    name: com.github.junrrein.PDFSlicer
+    state: present
+
+# Office
+
+- name: Install LibreOffice
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.libreoffice.LibreOffice
+    state: present
+
+- name: Install PDF Slicer
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Logs
+    state: present
+
+
+# Image editing
+
+- name: Install GIMP
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gimp.GIMP
+    state: present
+
+- name: Install Inkscape
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.inkscape.Inkscape
+    state: present
+
+# Audio
+
+- name: Install Spotify
+  async: 60
+  poll: 0
+  flatpak:
+    name: com.spotify.Client
+    state: present
+
+- name: Install Audacity
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.audacityteam.Audacity
+    state: present
+
+
+# IDEs
+
+- name: Install PyCharm
+  async: 60
+  poll: 0
+  flatpak:
+    name: com.jetbrains.PyCharm-Community
+    state: present
+
+- name: Install WebStorm
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.remmina.Remmina
+    state: present
+
+
+# Utilities
+
+- name: Install Remmina
+  async: 60
+  poll: 0
+  flatpak:
+    name: com.spotify.Client
+    state: present
+
+- name: Install Dconf Editor
+  async: 60
+  poll: 0
+  flatpak:
+    name: ca.desrt.dconf-editor
+    state: present
+
+
+# Gnome
+
+- name: Install Evolution
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Evolution
+    state: present
+
+
+- name: Install Gnome Calendar
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Calendar
+    state: present
+
+- name: Install Gnome Contacts
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Contacts
+    state: present
+
+- name: Install Gedit
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.gedit
+    state: present
+
+- name: Install Evince
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Evince
+    state: present
+    
+- name: Install Gnome Calculator
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Calculator
+    state: present
+    
+- name: Install G-Hex
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.ghex
+    state: present
+    
+- name: Install Gnome Logs
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Logs
+    state: present
+    
+- name: Install Gnome Fonts
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.font-viewer
+    state: present
+    
+- name: Install Gnome Maps
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Maps
+    state: present
+
+- name: Install Gnome Notes
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Notes
+    state: present
+
+- name: Install Gnome Power Stats
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.PowerStats
+    state: present
+
+- name: Install Gnome Sound Recorder
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.SoundRecorder
+    state: present
+
+- name: Install Celluloid
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.GnomeMpv
+    state: present
+
+- name: Install Gnome Books
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Books
+    state: present
+
+- name: Install Gnome Todo
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Todo
+    state: present
+
+
+# Gnome Games
+
+- name: Install Solitaire
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.AisleRiot
+    state: present
+
+- name: Install Chess
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Chess
+    state: present
+
+- name: Install Minesweeper
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Mines
+    state: present
+
+- name: Install Iagno
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.iagno
+    state: present
+
+- name: Install Lights Off
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.LightsOff
+    state: present
+
+- name: Install Tetris
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.quadrapassel
+    state: present
+
+## Flathub Beta
+
+- name: Install Lutris
+  async: 60
+  poll: 0
+  flatpak:
+    name: net.lutris.Lutris//beta
+    remote: flathub-beta
+    state: absent
+
