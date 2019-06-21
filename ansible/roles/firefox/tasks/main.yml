@@ -1,0 +1,14 @@
+---
+- name: Create chrome folder in profile folder
+  file:
+    path: "{{ profile_folder }}/chrome"
+    state: directory
+    owner: jlh
+    group: jlh
+
+- name: Enable custom userChrome.css
+  copy:
+    src: userChrome.css
+    dest: "{{ profile_folder }}/chrome/userChrome.css"
+    owner: jlh
+    group: jlh
