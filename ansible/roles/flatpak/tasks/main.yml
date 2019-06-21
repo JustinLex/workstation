@@ -1,7 +1,7 @@
 ---
 
 - name: Install Firefox Nightly
-  async: 600
+  async: 60000
   poll: 0
   flatpak:
     name: https://firefox-flatpak.mojefedora.cz/org.mozilla.FirefoxNightly.flatpakref
@@ -18,14 +18,14 @@
 # Games
 
 - name: Install Steam
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: com.valvesoftware.Steam
     state: present
     
 - name: Install Discord
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: com.discordapp.Discord
@@ -34,14 +34,14 @@
 # Office
 
 - name: Install LibreOffice
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.libreoffice.LibreOffice
     state: present
 
 - name: Install PDF Slicer
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: com.github.junrrein.PDFSlicer
@@ -51,21 +51,21 @@
 # Image editing
 
 - name: Install GIMP
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.gimp.GIMP
     state: present
 
 - name: Install Inkscape
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.inkscape.Inkscape
     state: present
 
 - name: Install Shotwell
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Shotwell
@@ -74,14 +74,14 @@
 # Audio
 
 - name: Install Spotify
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: com.spotify.Client
     state: present
 
 - name: Install Audacity
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.audacityteam.Audacity
@@ -91,14 +91,14 @@
 # IDEs
 
 - name: Install PyCharm
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: com.jetbrains.PyCharm-Community
     state: present
 
 - name: Install WebStorm
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.remmina.Remmina
@@ -108,14 +108,14 @@
 # Utilities
 
 - name: Install Remmina
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: com.spotify.Client
     state: present
 
 - name: Install Dconf Editor
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: ca.desrt.dconf-editor
@@ -125,7 +125,7 @@
 # Gnome
 
 - name: Install Evolution
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Evolution
@@ -133,105 +133,105 @@
 
 
 - name: Install Gnome Calendar
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Calendar
     state: present
 
 - name: Install Gnome Contacts
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Contacts
     state: present
 
 - name: Install Gedit
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.gedit
     state: present
 
 - name: Install Evince
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Evince
     state: present
     
 - name: Install Gnome Calculator
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Calculator
     state: present
     
 - name: Install G-Hex
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.ghex
     state: present
     
 - name: Install Gnome Logs
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Logs
     state: present
     
 - name: Install Gnome Fonts
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.font-viewer
     state: present
     
 - name: Install Gnome Maps
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Maps
     state: present
 
 - name: Install Gnome Notes
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Notes
     state: present
 
 - name: Install Gnome Power Stats
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.PowerStats
     state: present
 
 - name: Install Gnome Sound Recorder
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.SoundRecorder
     state: present
 
 - name: Install Celluloid
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: io.github.GnomeMpv
     state: present
 
 - name: Install Gnome Books
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Books
     state: present
 
 - name: Install Gnome Todo
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Todo
@@ -241,42 +241,42 @@
 # Gnome Games
 
 - name: Install Solitaire
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.AisleRiot
     state: present
 
 - name: Install Chess
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Chess
     state: present
 
 - name: Install Minesweeper
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.Mines
     state: present
 
 - name: Install Iagno
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.iagno
     state: present
 
 - name: Install Lights Off
-  async: 60
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.LightsOff
     state: present
 
 - name: Install Tetris
-  async: 300
+  async: 6000
   poll: 0
   flatpak:
     name: org.gnome.quadrapassel
