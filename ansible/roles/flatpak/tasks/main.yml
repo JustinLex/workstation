@@ -1,4 +1,13 @@
 ---
+
+- name: Install Firefox Nightly
+  async: 600
+  poll: 0
+  flatpak:
+    name: https://firefox-flatpak.mojefedora.cz/org.mozilla.FirefoxNightly.flatpakref
+    state: present
+
+
 - name: Enable Flathub
   flatpak_remote:
     name: flathub
@@ -16,16 +25,16 @@
     state: present
     
 - name: Install Discord
-  async: 60
+  async: 300
   poll: 0
   flatpak:
-    name: com.github.junrrein.PDFSlicer
+    name: com.discordapp.Discord
     state: present
 
 # Office
 
 - name: Install LibreOffice
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.libreoffice.LibreOffice
@@ -35,24 +44,31 @@
   async: 60
   poll: 0
   flatpak:
-    name: org.gnome.Logs
+    name: com.github.junrrein.PDFSlicer
     state: present
 
 
 # Image editing
 
 - name: Install GIMP
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.gimp.GIMP
     state: present
 
 - name: Install Inkscape
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.inkscape.Inkscape
+    state: present
+
+- name: Install Shotwell
+  async: 60
+  poll: 0
+  flatpak:
+    name: org.gnome.Shotwell
     state: present
 
 # Audio
@@ -75,14 +91,14 @@
 # IDEs
 
 - name: Install PyCharm
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: com.jetbrains.PyCharm-Community
     state: present
 
 - name: Install WebStorm
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.remmina.Remmina
@@ -152,7 +168,7 @@
     state: present
     
 - name: Install G-Hex
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.gnome.ghex
@@ -187,7 +203,7 @@
     state: present
 
 - name: Install Gnome Power Stats
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.gnome.PowerStats
@@ -201,10 +217,10 @@
     state: present
 
 - name: Install Celluloid
-  async: 60
+  async: 300
   poll: 0
   flatpak:
-    name: org.gnome.GnomeMpv
+    name: io.github.GnomeMpv
     state: present
 
 - name: Install Gnome Books
@@ -215,7 +231,7 @@
     state: present
 
 - name: Install Gnome Todo
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.gnome.Todo
@@ -225,7 +241,7 @@
 # Gnome Games
 
 - name: Install Solitaire
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.gnome.AisleRiot
@@ -246,7 +262,7 @@
     state: present
 
 - name: Install Iagno
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.gnome.iagno
@@ -260,19 +276,9 @@
     state: present
 
 - name: Install Tetris
-  async: 60
+  async: 300
   poll: 0
   flatpak:
     name: org.gnome.quadrapassel
     state: present
-
-## Flathub Beta
-
-- name: Install Lutris
-  async: 60
-  poll: 0
-  flatpak:
-    name: net.lutris.Lutris//beta
-    remote: flathub-beta
-    state: absent
 
