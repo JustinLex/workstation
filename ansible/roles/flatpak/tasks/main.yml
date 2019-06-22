@@ -101,7 +101,7 @@
   async: 6000
   poll: 0
   flatpak:
-    name: org.remmina.Remmina
+    name: com.jetbrains.WebStorm
     state: present
 
 
@@ -118,7 +118,7 @@
   async: 6000
   poll: 0
   flatpak:
-    name: com.spotify.Client
+    name: org.remmina.Remmina
     state: present
 
 - name: Install Dconf Editor
