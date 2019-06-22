@@ -23,6 +23,10 @@
       - --unchanged-exit-77
       - nano
       - htop
+      - powertop
+      - nethogs
+      - iotop
+      - gnome-tweaks
       - enpass
       - lutris
   register: result
