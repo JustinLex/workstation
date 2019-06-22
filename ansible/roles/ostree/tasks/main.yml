@@ -23,6 +23,7 @@
       - --unchanged-exit-77
       - nano
       - htop
+      - lm_sensors
       - powertop
       - nethogs
       - iotop
