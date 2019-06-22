@@ -107,6 +107,13 @@
 
 # Utilities
 
+- name: Install Nextcloud client
+  async: 6000
+  poll: 0
+  flatpak:
+    name: org.nextcloud.Nextcloud
+    state: present
+
 - name: Install Remmina
   async: 6000
   poll: 0
