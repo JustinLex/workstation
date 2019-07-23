@@ -1,0 +1,10 @@
+---
+- name: Add docker group
+  group: 
+    name: docker
+  register: result
+
+- name: Set jlh groups
+  user:
+    name: jlh
+    groups: wheel,docker
