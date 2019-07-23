@@ -10,3 +10,4 @@
     visibility: collapse;
 }
 
+#tabbrowser-tabs { visibility: collapse !important; }
