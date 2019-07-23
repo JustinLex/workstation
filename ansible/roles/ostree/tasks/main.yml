@@ -13,6 +13,11 @@
   get_url:
     url: https://yum.enpass.io/enpass-yum.repo
     dest: /etc/yum.repos.d/enpass-yum.repo
+
+- name: Install Howdy Repository
+  get_url:
+    url: https://copr.fedorainfracloud.org/coprs/luya/howdy/repo/fedora-30/luya-howdy-fedora-30.repo
+    dest: /etc/yum.repos.d/luya-howdy-fedora-30.repo
  
 - name: Install System Packages                      
   command: 
@@ -31,6 +36,7 @@
       - enpass
       - lutris
       - docker
+      - howdy
   register: result
   failed_when: result.rc != 0 and result.rc != 77
   changed_when: result.rc == 0
