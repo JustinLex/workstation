@@ -111,6 +111,12 @@
     name: ca.desrt.dconf-editor
     state: present
 
+- name: Install Sublime Text Editor
+  async: 6000
+  poll: 0
+  flatpak:
+    name: com.sublimetext.three
+    state: present
 
 # Gnome
 
