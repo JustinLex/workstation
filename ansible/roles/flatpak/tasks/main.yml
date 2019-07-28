@@ -88,23 +88,6 @@
     state: present
 
 
-# IDEs
-
-- name: Install PyCharm
-  async: 6000
-  poll: 0
-  flatpak:
-    name: com.jetbrains.PyCharm-Community
-    state: present
-
-- name: Install WebStorm
-  async: 6000
-  poll: 0
-  flatpak:
-    name: com.jetbrains.WebStorm
-    state: present
-
-
 # Utilities
 
 - name: Install Nextcloud client
