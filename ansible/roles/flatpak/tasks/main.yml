@@ -216,7 +216,7 @@
   async: 6000
   poll: 0
   flatpak:
-    name: io.github.GnomeMpv
+    name: io.github.celluloid_player.Celluloid
     state: present
 
 - name: Install Gnome Books
