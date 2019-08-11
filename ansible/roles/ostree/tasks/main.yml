@@ -36,7 +36,7 @@
       - enpass
       - lutris
       - docker
-      - howdy
+      #- howdy
   register: result
   failed_when: result.rc != 0 and result.rc != 77
   changed_when: result.rc == 0
