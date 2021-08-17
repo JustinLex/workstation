@@ -1,0 +1,10 @@
+---
+- name: Install Enpass Repository
+  ansible.builtin.get_url:
+    url: https://yum.enpass.io/enpass-yum.repo
+    dest: /etc/yum.repos.d/enpass-yum.repo
+
+- name: Install Enpass
+  ansible.builtin.dnf:
+    name: enpass
+    state: latest

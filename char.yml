@@ -3,7 +3,4 @@
   connection: local
   become: yes
   roles:
-  - ostree
-  - flatpak
-  - firefox
-  - users
+  - enpass
