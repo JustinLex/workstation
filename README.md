@@ -10,6 +10,9 @@ An ansible playbook containing install scripts for my productivity computer
 
 ### Software
 * Enpass
+* JetBrains Toolbox
+* Kubernetes + Minikube
+* Samsung Unified Linux Driver for printers
 
 ### Tweaks (todo)
 * Netnod NTP/NTS servers
