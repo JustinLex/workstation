@@ -1,0 +1,10 @@
+---
+- name: Install Samsung Printer Driver Repository
+  ansible.builtin.get_url:
+    url: https://negativo17.org/repos/fedora-uld.repo
+    dest: /etc/yum.repos.d/fedora-uld.repo
+
+- name: Install Samsung Unified Linux Driver (for printers)
+  ansible.builtin.dnf:
+    name: uld
+    state: latest
