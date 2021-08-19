@@ -1,0 +1,6 @@
+---
+- name: Install Mullvad VPN
+  ansible.builtin.dnf:
+    name: 'https://mullvad.net/download/app/rpm/latest'
+    disable_gpg_check: yes
+    state: present
