@@ -1,0 +1,13 @@
+---
+- name: Install TLP
+  ansible.builtin.dnf:
+    name:
+      - tlp
+    state: latest
+
+- name: Set battery limits
+  ansible.builtin.copy:
+    content: |
+      START_CHARGE_THRESH_BAT0=40
+      STOP_CHARGE_THRESH_BAT0=80
+    dest: /etc/tlp.d/01-bat_limit.conf

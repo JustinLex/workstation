@@ -16,6 +16,7 @@ An ansible playbook containing install scripts for my productivity computer
 * Mullvad VPN
 
 ### Tweaks (todo)
+* Thinkpad battery limits
 * Netnod NTP/NTS servers
 * Hibernation
 * Windows Hello

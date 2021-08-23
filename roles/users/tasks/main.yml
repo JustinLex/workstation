@@ -1,10 +1,12 @@
 ---
-- name: Add docker group
-  group: 
-    name: docker
-  register: result
+- name: Add libvirt group
+  ansible.builtin.group:
+    name: libvirt
+    state: present
 
 - name: Set jlh groups
-  user:
+  ansible.builtin.user:
     name: jlh
-    groups: wheel,docker
+    groups:
+      - wheel
+      - libvirt

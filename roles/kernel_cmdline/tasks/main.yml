@@ -1,0 +1,6 @@
+---
+- name: Enable Panel Self-Refresh
+  ansible.builtin.command: 'grubby --update-kernel=ALL --args="i915.enable_psr=1"'
+
+- name: Enable Framebuffer Compression
+  ansible.builtin.command: 'grubby --update-kernel=ALL --args="enable_fbc=1"'
