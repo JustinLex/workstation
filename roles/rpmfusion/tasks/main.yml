@@ -1,0 +1,26 @@
+---
+- name: Install RPM Fusion free RPM key for Fedora 35
+  ansible.builtin.rpm_key:
+    key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
+    state: present
+- name: Install RPM Fusion nonfree RPM key for Fedora 35
+  ansible.builtin.rpm_key:
+    key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
+    state: present
+- name: Install RPM Fusion repos for Fedora 35
+  ansible.builtin.dnf:
+    name:
+      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-35.noarch.rpm
+      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-35.noarch.rpm
+    state: latest
+- name: Install Gnome Software metadata and va-api driver
+  ansible.builtin.dnf:
+    name:
+      - '@core'
+      - 'libva-intel-driver'
+      - 'ffmpeg'
+      - 'libva-utils'
+      - 'libvdpau-va-gl'
+    state: latest
+- name: Install gstreamer plugins
+  ansible.builtin.command: 'dnf groupupdate -y multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin'
