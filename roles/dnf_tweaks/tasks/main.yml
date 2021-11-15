@@ -1,0 +1,9 @@
+---
+- name: Make DNF use parallel downloads
+  community.general.ini_file:
+    path: /etc/dnf/dnf.conf
+    section: main
+    option: max_parallel_downloads
+    value: "20"
+    state: present
+    exclusive: yes

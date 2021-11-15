@@ -3,6 +3,7 @@
   connection: local
   become: yes
   roles:
+  - dnf_tweaks
   - enpass
   - minikube
   - jetbrains
