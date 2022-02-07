@@ -4,10 +4,13 @@
     name: libvirt
     state: present
 
-- name: Set jlh groups
+- name: Set groups
   ansible.builtin.user:
-    name: jlh
+    name: {{ item }}
     groups:
       - wheel
       - libvirt
       - wireshark
+  loop:
+    - jlh
+    - justin
