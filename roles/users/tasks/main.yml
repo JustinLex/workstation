@@ -6,7 +6,7 @@
 
 - name: Set groups
   ansible.builtin.user:
-    name: {{ item }}
+    name: "{{ item }}"
     groups:
       - wheel
       - libvirt
